@@ -1,0 +1,68 @@
+.form{
+    width: min(600px, 100%);
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    border-radius: var(--g-br);
+    background-color: $color-gray-1;
+    padding: min(60px, 10%) min(80px, 10%);
+
+    &__block{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    &__input_label{
+        font-size: 20px;
+        font-weight: 700;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        user-select: none;
+    }
+
+    &__input_eye{
+        font-size: 16px;
+        cursor: pointer;
+        color: #5A5A5A;
+    }
+
+    &__input_error{
+        color: #EF5353;
+        width: 100%;
+        text-align: center;
+    }
+
+    &__input{
+        background-color: transparent;
+        border: none;
+        border-bottom: 2px solid #5A5A5A;
+        padding: 10px 5px;
+        font-size: 18px;
+        color: $text-color;
+        outline: none;
+    }
+
+    &__submit_button{
+        border: none;
+        border-radius: var(--g-br);
+        padding: 10px 5px;
+        font-size: 16px;
+        background-color: $fourth-color;
+        filter: brightness(1);
+        box-shadow: 0 0 5px $fourth-color;
+        transition: all 0.2s ease;
+        &:hover{
+            filter: brightness(0.8);
+            box-shadow: none;
+        }
+        &:disabled{
+            filter: brightness(0.5);
+            cursor: not-allowed;
+        }
+    }
+}

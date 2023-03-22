@@ -1,0 +1,13 @@
+.info{
+    &--secondary{
+        color: $color-gray-3;
+
+        &--accent{
+            color: $text-color;
+        }
+    }
+
+    &--large{
+        font-size: 1.2em;
+    }
+}

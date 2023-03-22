@@ -1,0 +1,18 @@
+* {
+    scrollbar-width: thin;
+    scrollbar-color: $second-color transparent;
+}
+
+/* Работает в Chrome, Edge и Safari */
+*::-webkit-scrollbar {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: $second-color;
+    border-radius: 20px;
+}

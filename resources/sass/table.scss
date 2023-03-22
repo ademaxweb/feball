@@ -1,0 +1,23 @@
+.table{
+    table-layout: fixed;
+    width: 100%;
+    text-align: center;
+    & th{
+        font-weight: 700;
+        font-size: 20px;
+    }
+    background-color: $color-gray-1;
+    padding: 15px 0;
+    border-radius: var(--g-br);
+    //border-spacing: 15px;
+    & tr {
+        border-radius: var(--g-br);
+        &:nth-child(2n){
+            background-color: $main-color;
+        }
+    }
+
+    & td {
+        padding: 20px 5px;
+    }
+}

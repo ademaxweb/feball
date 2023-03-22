@@ -1,0 +1,28 @@
+.button{
+    padding: 10px 10px;
+    border: none;
+    background-color: $fourth-color;
+    color: $main-color;
+    border-radius: var(--g-br);
+    transition: 0.2s;
+    outline: none;
+    &:hover{
+        filter: brightness(0.8);
+    }
+    &--danger{
+        background-color: #FF0032;
+        color: $text-color
+    }
+    &--primary{
+        background-color: $color-primary;
+        color: $text-color;
+    }
+    &--full{
+        width: 100%;
+    }
+
+    &--l{
+        padding: 20px;
+        font-size: 18px;
+    }
+}

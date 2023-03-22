@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+@import "variables";
+@import "scrollbar";
+@import "button";
+@import "container";
+@import "form";
+@import "list";
+@import "table";
+@import "info";
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+body{
+    width: 100%;
+    background-color: $main-color;
+}
+
+
+p, span, h1, h2, h3, h4, div{
+    color: $text-color;
+}
+
+.link{
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: $text-color;
+    & > *{
+        color: $text-color;
+    }
+    &--underlined {
+        text-decoration: underline;
+    }
+    &__icon{
+        color: $color-gray-2;
+    }
+    &--with_icon{
+        gap: 5px;
+    }
+}
+
+.header {
+    height: var(--header-height);
+    width: 100%;
+
+    &__content{
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo{
+        height: 100%;
+        display: flex;
+        align-items: center;
+    }
+
+    &__link{
+        color: $text-color;
+        transition: all 0.2s ease;
+        display: flex;
+        align-items: center;
+        padding: 0 5px;
+        gap: 10px;
+        & > * {
+            font-size: inherit;
+            transition: 0.2s;
+        }
+        &:hover{
+            color: $third-color;
+            & > * {
+                //color: $third-color;
+            }
+        }
+        &:after{
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            left: 0;
+            bottom: -10px;
+            transform: translateY(-15px);
+            transition: all 0.3s ease;
+
+        }
+        &.router-link-active{
+            position: relative;
+            &:after{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 2px;
+                background-color: $third-color;
+                left: 0;
+                bottom: -10px;
+                transform: translateY(0);
+
+            }
+        }
+        &__icon{
+            color: #4E4E4E;
+        }
+    }
+
+    &__links{
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 20px;
+        @media screen and (max-width: $width-tablet - 1px) {
+            & > .header__link {
+                display: none;
+            }
+        }
+    }
+
+
+    &__menu{
+        display: none;
+        position: fixed;
+        height: 100vh;
+        width: 100vw;
+        left: 0;
+        top: 0;
+        background-color: rgba(15, 15, 15, 0.95);
+        padding: 50px 25px;
+        z-index: 1000;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+        @media screen and (max-width: $width-tablet - 1px) {
+            display: flex;
+        }
+        &__link{
+            display: flex;
+            gap: 10px;
+            align-items: center;
+            line-height: 20px;
+            font-size: 20px;
+        }
+        &__close{
+            position: absolute;
+            right: 20px;
+            top: 20px;
+            background-color: transparent;
+            border-radius: 50%;
+            border: 2px solid rgba(100, 100, 100, .9);
+            color: rgba(100, 100, 100, .9);
+            padding: 15px;
+            width: 15px;
+            height: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__open{
+            background-color: transparent;
+            border: none;
+            color: white;
+            font-size: 24px;
+            display: none;
+            align-items: center;
+            @media screen and (max-width: $width-tablet - 1px) {
+                display: flex;
+            }
+        }
+    }
+}
+
+.main {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.footer {
+    height: var(--footer-height);
+    width: 100%;
+    border-top: 1px solid rgba(70, 70, 70, .6);
+}
+
+.content{
+    width: var(--content-width);
+    height: 100%;
+    margin: 0 auto;
+}
+
+
+.club_players{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.club_player{
+    width: 335px;
+    height: 446px;
+    background-color: $color-gray-1;
+    border-radius: var(--g-br);
+    padding: 25px 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    &__image{
+        width: 100%;
+        max-height: 280px;
+        overflow: hidden;
+        border-radius: var(--g-br);
+        & > img{
+            object-fit: cover;
+            max-width: 100%;
+            //object-fit: contain;
+        }
+    }
+    &__secondary_text{
+        color: $color-gray-2
+    }
+}
+
+.heading{
+    &--secondary{
+        color: $color-gray-3;
+        &__accent{
+            color: $text-color
+        }
+    }
+}

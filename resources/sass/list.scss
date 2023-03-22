@@ -1,0 +1,21 @@
+.list{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    list-style: none;
+    &__item{
+        display: flex;
+        width: 100%;
+        padding: 20px 15px;
+        background-color: $color-gray-1;
+        color: $text-color;
+        justify-content: space-between;
+        border-radius: var(--g-br);
+        transition: all 0.2s ease;
+        &:hover{
+            filter: brightness(1.2);
+        }
+    }
+}
