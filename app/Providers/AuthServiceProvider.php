@@ -36,13 +36,18 @@ class AuthServiceProvider extends ServiceProvider
             }
         });
 
-        foreach (Permission::all() as $permission)
-        {
-            Gate::define($permission->name, function (?User $user) use ($permission) {
-                if ($permission->name == "CAN_VIEW_STATS" && !$user) return true;
-                if (!$user) return  false;
-                return $user->hasPermission($permission);
-            });
+        try {
+            foreach (Permission::all() as $permission)
+            {
+                Gate::define($permission->name, function (?User $user) use ($permission) {
+                    if ($permission->name == "CAN_VIEW_STATS" && !$user) return true;
+                    if (!$user) return  false;
+                    return $user->hasPermission($permission);
+                });
+            }
+        } catch (\Exception $e) {
+            return [];
         }
+
     }
 }
