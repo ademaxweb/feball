@@ -11,7 +11,7 @@
                 </router-link>
                 <div class="container container--v-center container--gap">
                     <p class="info info--secondary">
-                        Клуб: <span class="info--secondary--accent">{{stadium.club.name}}</span>
+                        Клуб: <span class="info--secondary--accent">{{stadium.club?.name}}</span>
                     </p>
                     <h3 class="heading heading--secondary">{{new Date(stadium.founding).getFullYear()}}</h3>
                 </div>

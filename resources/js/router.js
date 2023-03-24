@@ -65,6 +65,12 @@ const router = createRouter({
             component: ()=>import('./views/Countries/CountryIndex.vue')
         },
         {
+            name: 'country.create',
+            path: '/country/create',
+            meta: {},
+            component: ()=>import('./views/Countries/CountryCreate.vue')
+        },
+        {
             name: 'country',
             path: '/country/:id',
             meta: {},
@@ -87,6 +93,12 @@ const router = createRouter({
             path: '/stadiums',
             meta: {},
             component: ()=>import('./views/Stadiums/StadiumIndex.vue')
+        },
+        {
+            name: 'stadium.create',
+            path: '/stadium/create',
+            meta: {},
+            component: ()=>import('./views/Stadiums/StadiumCreate.vue')
         },
         {
             name: 'stadium',

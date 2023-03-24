@@ -2,7 +2,7 @@
     <div class="container container--section container--gap container--pv" v-if="stadium">
         <h1 class="heading">{{stadium.name}}</h1>
         <h2 class="heading heading--secondary">Вместимость стадиона: <span class="info--secondary--accent">{{ (15000).toLocaleString() }}</span></h2>
-        <h2 class="heading heading--secondary">
+        <h2 class="heading heading--secondary" v-if="stadium.club">
             Клуб:
             <router-link :to="{name: 'club', params: {id: stadium.club.id}}" class="link link--with_icon">
                 {{stadium.club.name}}
