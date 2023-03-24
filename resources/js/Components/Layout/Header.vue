@@ -86,11 +86,20 @@
                 <router-link @click="closeHeaderMenu" :to="{name: 'index'}" class="link header__menu__link">
                     <font-awesome-icon icon="fa-solid fa-house" />Главная
                 </router-link>
+                <router-link @click="closeHeaderMenu" :to="{name: 'clubs'}" class="link header__menu__link">
+                    <font-awesome-icon icon="fa-solid fa-shirt" />Клубы
+                </router-link>
                 <router-link @click="closeHeaderMenu" :to="{name: 'tournaments'}" class="link header__menu__link">
                     <font-awesome-icon icon="fa-solid fa-trophy" />Турниры
                 </router-link>
                 <router-link @click="closeHeaderMenu" :to="{name: 'games'}" class="link header__menu__link">
                     <font-awesome-icon icon="fa-solid fa-futbol" />Матчи
+                </router-link>
+                <router-link @click="closeHeaderMenu" :to="{name: 'countries'}" class="link header__menu__link">
+                    <font-awesome-icon icon="fa-solid fa-flag" />Страны
+                </router-link>
+                <router-link @click="closeHeaderMenu" :to="{name: 'stadiums'}" class="link header__menu__link">
+                    <font-awesome-icon icon="fa-solid fa-passport" />Стадионы
                 </router-link>
                 <router-link v-if="!authorized" @click="closeHeaderMenu" :to="{name: 'login'}" class="link header__menu__link">
                     <font-awesome-icon icon="fa-solid fa-arrow-right-to-bracket" />Войти

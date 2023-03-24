@@ -22,7 +22,7 @@
       "resources/js/views/Register.vue",
       "resources/js/views/Profile.vue"
     ],
-    "file": "assets/app-99cc9943.js",
+    "file": "assets/app-784f8fc0.js",
     "isEntry": true,
     "src": "resources/js/app.js"
   },
@@ -30,7 +30,7 @@
     "assets": [
       "assets/unknown_player-ee094d9d.jpg"
     ],
-    "file": "assets/ClubCurrent-4efd9d3a.js",
+    "file": "assets/ClubCurrent-22c428e4.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -38,7 +38,7 @@
     "src": "resources/js/views/Clubs/ClubCurrent.vue"
   },
   "resources/js/views/Clubs/ClubIndex.vue": {
-    "file": "assets/ClubIndex-f963f882.js",
+    "file": "assets/ClubIndex-178bb536.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -46,7 +46,7 @@
     "src": "resources/js/views/Clubs/ClubIndex.vue"
   },
   "resources/js/views/Countries/CountryCurrent.vue": {
-    "file": "assets/CountryCurrent-f7ce00c4.js",
+    "file": "assets/CountryCurrent-a23c2334.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -54,7 +54,7 @@
     "src": "resources/js/views/Countries/CountryCurrent.vue"
   },
   "resources/js/views/Countries/CountryIndex.vue": {
-    "file": "assets/CountryIndex-f52a6b26.js",
+    "file": "assets/CountryIndex-8f5f6e6f.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -62,7 +62,7 @@
     "src": "resources/js/views/Countries/CountryIndex.vue"
   },
   "resources/js/views/Games/GameCurrent.vue": {
-    "file": "assets/GameCurrent-67e76014.js",
+    "file": "assets/GameCurrent-f1d17e4c.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -70,7 +70,7 @@
     "src": "resources/js/views/Games/GameCurrent.vue"
   },
   "resources/js/views/Games/GameIndex.vue": {
-    "file": "assets/GameIndex-d995f563.js",
+    "file": "assets/GameIndex-9803c2d7.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -78,7 +78,7 @@
     "src": "resources/js/views/Games/GameIndex.vue"
   },
   "resources/js/views/Home.vue": {
-    "file": "assets/Home-45806103.js",
+    "file": "assets/Home-85854aa5.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -86,7 +86,7 @@
     "src": "resources/js/views/Home.vue"
   },
   "resources/js/views/Login.vue": {
-    "file": "assets/Login-275aef62.js",
+    "file": "assets/Login-e4bc9de5.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -94,7 +94,7 @@
     "src": "resources/js/views/Login.vue"
   },
   "resources/js/views/Profile.vue": {
-    "file": "assets/Profile-1ee9daf1.js",
+    "file": "assets/Profile-f35a7fab.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -102,7 +102,7 @@
     "src": "resources/js/views/Profile.vue"
   },
   "resources/js/views/Register.vue": {
-    "file": "assets/Register-556e864c.js",
+    "file": "assets/Register-335517f4.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -110,7 +110,7 @@
     "src": "resources/js/views/Register.vue"
   },
   "resources/js/views/Stadiums/StadiumCurrent.vue": {
-    "file": "assets/StadiumCurrent-8019a920.js",
+    "file": "assets/StadiumCurrent-f7fe8474.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -118,7 +118,7 @@
     "src": "resources/js/views/Stadiums/StadiumCurrent.vue"
   },
   "resources/js/views/Stadiums/StadiumIndex.vue": {
-    "file": "assets/StadiumIndex-5f36a3ff.js",
+    "file": "assets/StadiumIndex-35e6ec46.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -126,7 +126,7 @@
     "src": "resources/js/views/Stadiums/StadiumIndex.vue"
   },
   "resources/js/views/Tournaments/TournamentCurrent.vue": {
-    "file": "assets/TournamentCurrent-0b44827a.js",
+    "file": "assets/TournamentCurrent-32b76cc1.js",
     "imports": [
       "resources/js/app.js"
     ],
@@ -134,7 +134,7 @@
     "src": "resources/js/views/Tournaments/TournamentCurrent.vue"
   },
   "resources/js/views/Tournaments/TournamentIndex.vue": {
-    "file": "assets/TournamentIndex-b10d077b.js",
+    "file": "assets/TournamentIndex-dc74aa43.js",
     "imports": [
       "resources/js/app.js"
     ],
