@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Scorelandge</title>
+    <title>FeBall</title>
 
     <!-- Fonts -->
 {{--    <link rel="icon" href="{{ url('images/logo.svg') }}">--}}
