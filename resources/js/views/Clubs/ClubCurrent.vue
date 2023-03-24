@@ -1,7 +1,13 @@
 <template>
     <div class="container--section container--gap container--pv" v-if="club">
         <h1 class="heading">{{club.name}}</h1>
-        <h2 class="heading heading--secondary">Стадион: <span class="heading--secondary__accent">{{club.stadium.name}}</span></h2>
+        <h2 class="heading heading--secondary">
+            Стадион:
+            <router-link :to="{name: 'stadium', params: {id: club.stadium.id}}" class="link link--with_icon">
+                {{club.stadium.name}}
+                <font-awesome-icon class="link__icon" icon="fa-solid fa-link" />
+            </router-link>
+        </h2>
         <h2 class="heading heading--secondary">Год основания: <span class="heading--secondary__accent">{{new Date(club.founding).getFullYear()}}</span></h2>
         <h2 class="heading heading--secondary">Участие в турнирах:</h2>
         <ul class="list">

@@ -86,7 +86,13 @@ const router = createRouter({
             name: 'stadiums',
             path: '/stadiums',
             meta: {},
-            component: ()=>import('./views/Login.vue')
+            component: ()=>import('./views/Stadiums/StadiumIndex.vue')
+        },
+        {
+            name: 'stadium',
+            path: '/stadium/:id',
+            meta: {},
+            component: ()=>import('./views/Stadiums/StadiumCurrent.vue')
         },
 
 

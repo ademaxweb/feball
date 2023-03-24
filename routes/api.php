@@ -16,6 +16,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::group(["prefix" => "country"], function ($router) {
     Route::get('/', \App\Http\Controllers\Country\CountryIndexController::class);
+    Route::get('/fullcollection', [\App\Http\Controllers\Country\CountryIndexController::class, 'getAllFull']);
     Route::get('/latest', [\App\Http\Controllers\Country\CountryIndexController::class, 'getLatest']);
     Route::get('/{country}', [\App\Http\Controllers\Country\CountryIndexController::class, 'getById'])->whereNumber('country');
     Route::post('/create', \App\Http\Controllers\Country\CountryCreateController::class);

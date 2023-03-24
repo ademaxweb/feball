@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Country;
 
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Country\CountryCollection;
+use App\Http\Resources\Country\CountryFullCollection;
 use App\Http\Resources\Country\CountryResource;
 use App\Http\Resources\Country\CountryWithClubsResource;
 use App\Models\Country;
@@ -29,5 +30,10 @@ class CountryIndexController extends Controller
     public function getById(Country $country): CountryWithClubsResource
     {
         return new CountryWithClubsResource($country);
+    }
+
+    public function getAllFull(CountryService $service): CountryFullCollection
+    {
+        return new CountryFullCollection($service->getAll());
     }
 }

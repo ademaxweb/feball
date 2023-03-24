@@ -35,6 +35,10 @@ api.country = {
         return api.get('/api/country/')
             .then(response => response.data.data)
     },
+    getAllFull: ()=> {
+        return api.get('/api/country/fullcollection')
+            .then(response => response.data.data)
+    },
     getLatest: () => {
         return api.get('/api/country/latest')
             .then(response => response.data.data)
