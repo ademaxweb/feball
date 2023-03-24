@@ -62,7 +62,13 @@ const router = createRouter({
             name: 'countries',
             path: '/countries',
             meta: {},
-            component: ()=>import('./views/Login.vue')
+            component: ()=>import('./views/Countries/CountryIndex.vue')
+        },
+        {
+            name: 'country',
+            path: '/country/:id',
+            meta: {},
+            component: ()=>import('./views/Countries/CountryCurrent.vue')
         },
 
 

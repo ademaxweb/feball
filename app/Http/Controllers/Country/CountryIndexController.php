@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Country;
 use App\Http\Controllers\Controller;
 use App\Http\Resources\Country\CountryCollection;
 use App\Http\Resources\Country\CountryResource;
+use App\Http\Resources\Country\CountryWithClubsResource;
 use App\Models\Country;
 use App\Services\CountryService;
 use Illuminate\Http\Request;
@@ -12,7 +13,7 @@ use Illuminate\Http\Request;
 class CountryIndexController extends Controller
 {
     public function __construct() {
-        $this->middleware(['jwt.auth', 'canViewStats']);
+        $this->middleware(['canViewStats']);
     }
 
     public function __invoke(CountryService $service): CountryCollection
@@ -25,8 +26,8 @@ class CountryIndexController extends Controller
         return new CountryResource($service->getLatest());
     }
 
-    public function getById(Country $country): CountryResource
+    public function getById(Country $country): CountryWithClubsResource
     {
-        return new CountryResource($country);
+        return new CountryWithClubsResource($country);
     }
 }

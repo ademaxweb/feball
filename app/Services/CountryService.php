@@ -15,7 +15,7 @@ class CountryService
     }
 
     public function getAll(): Collection {
-        return Country::all();
+        return Country::query()->where("id", ">", 1)->get();
     }
 
     /**
