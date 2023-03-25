@@ -45,7 +45,9 @@ class AuthServiceProvider extends ServiceProvider
                     return $user->hasPermission($permission);
                 });
             }
-        } catch (\Exception $e) {}
+        } catch (\Exception $e) {
+            return [];
+        }
 
     }
 }
