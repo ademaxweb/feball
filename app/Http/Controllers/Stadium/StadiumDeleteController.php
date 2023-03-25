@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class StadiumDeleteController extends Controller
 {
     public function __construct() {
-        $this->middleware('canDeleteModels');
+        $this->middleware(['jwt.auth', 'canDeleteModels']);
     }
 
     public function __invoke(Stadium $stadium, StadiumService $service): \Illuminate\Http\JsonResponse

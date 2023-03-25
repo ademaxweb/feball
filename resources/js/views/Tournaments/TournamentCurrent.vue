@@ -1,6 +1,9 @@
 <template>
     <div class="container container--section container--gap container--pv" v-if="tournament">
         <h1 class="heading">{{tournament.name}}</h1>
+        <div class="container container--full container--gap-s">
+            <button class="button button--action button--danger" @click="deleteTournament">Удалить</button>
+        </div>
         <h2 class="heading heading--secondary">Клубов в турнире: <span class="info--secondary--accent">{{tournament.clubs_count}}</span></h2>
         <div class="container container--full container--column container--gap-s">
             <h2 class="heading heading--secondary">Последние матчи:</h2>
@@ -57,11 +60,24 @@ export default {
     name: "TournamentCurrent",
     data(){
         return {
-            tournament: null
+            tournament: null,
+            tournament_id: null
+        }
+    },
+    methods: {
+        deleteTournament (){
+            if (!this.tournament_id) return false
+            api.tournament.delete(this.tournament_id)
+                .then(data => {
+                    this.tournament = null
+                    this.$router.push({name: "tournaments"})
+                })
+                .catch(error => console.log(error))
         }
     },
     mounted() {
-        api.tournament.getById(this.$route.params.id)
+        this.tournament_id = this.$route.params.id
+        api.tournament.getById(this.tournament_id)
             .then(data => {
                 this.tournament = data
                 console.log(data);

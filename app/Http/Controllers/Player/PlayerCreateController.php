@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class PlayerCreateController extends Controller
 {
     public function __construct() {
-        $this->middleware('canCreateModels');
+        $this->middleware(['jwt.auth', 'canCreateModels']);
     }
 
     public function __invoke(PlayerCreateRequest $request, PlayerService $service): PlayerFullResource

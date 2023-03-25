@@ -1,6 +1,9 @@
 <template>
     <div class="container container--gap container--column container--pv">
         <h1 class="heading">Список стран</h1>
+        <div class="container container--gap-s">
+            <router-link :to="{name: 'country.create'}" class="button button--full">Создать страну</router-link>
+        </div>
         <ul class="list" v-if="countries">
             <li class="list__item" v-for="country in countries" :key="country.id">
                 <router-link :to="{name: 'country', params: {id: country.id}}" class="link link--with_icon">

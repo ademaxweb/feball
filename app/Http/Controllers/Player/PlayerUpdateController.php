@@ -13,7 +13,7 @@ class PlayerUpdateController extends Controller
 {
 
     public function __construct() {
-        $this->middleware('canUpdateModels');
+        $this->middleware(['jwt.auth', 'canUpdateModels']);
     }
 
     public function __invoke(PlayerUpdateRequest $request, Player $player, PlayerService $service): PlayerFullResource

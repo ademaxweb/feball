@@ -1,6 +1,9 @@
 <template>
 <div class="container container--gap container--column container--pv">
     <h1 class="heading">Список стадионов</h1>
+    <div class="container container--gap-s">
+        <router-link :to="{name: 'stadium.create'}" class="button button--full">Создать стадион</router-link>
+    </div>
     <div class="container container--column container--gap-s" v-for="country in countries" :key="country.id" v-show="country.stadiums.length > 0">
         <h2 class="heading heading--secondary">{{country.name}}</h2>
         <ul class="list">
@@ -11,7 +14,7 @@
                 </router-link>
                 <div class="container container--v-center container--gap">
                     <p class="info info--secondary">
-                        Клуб: <span class="info--secondary--accent">{{stadium.club?.name}}</span>
+                        Клуб: <span class="info--secondary--accent">{{stadium.club?.name || "Отсутствует"}}</span>
                     </p>
                     <h3 class="heading heading--secondary">{{new Date(stadium.founding).getFullYear()}}</h3>
                 </div>

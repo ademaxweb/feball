@@ -6,6 +6,9 @@
     border-radius: var(--g-br);
     transition: 0.2s;
     outline: none;
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
     &:hover{
         filter: brightness(0.8);
     }
@@ -24,5 +27,11 @@
     &--l{
         padding: 20px;
         font-size: 18px;
+    }
+
+    &--action{
+        width: 200px;
+        display: flex;
+        justify-content: center;
     }
 }

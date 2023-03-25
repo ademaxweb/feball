@@ -11,7 +11,7 @@ class TournamentDeleteController extends Controller
 {
 
     public function __construct() {
-        $this->middleware('canDeleteModels');
+        $this->middleware(['jwt.auth', 'canDeleteModels']);
     }
 
     public function __invoke(Tournament $tournament, TournamentService $service): \Illuminate\Http\JsonResponse

@@ -7,6 +7,7 @@
 @import "list";
 @import "table";
 @import "info";
+@import "dropdown";
 
 *{
     margin: 0;
@@ -41,6 +42,12 @@ p, span, h1, h2, h3, h4, div{
     }
     &--with_icon{
         gap: 5px;
+    }
+    &--action{
+
+        &-primary{
+
+        }
     }
 }
 

@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class ClubUpdateController extends Controller
 {
     public function __construct() {
-        $this->middleware('canUpdateModels');
+        $this->middleware(['jwt.auth', 'canUpdateModels']);
     }
 
     public function __invoke(ClubUpdateRequest $request, Club $club, ClubService $service): ClubFullResource

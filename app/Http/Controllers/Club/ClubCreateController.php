@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ClubCreateController extends Controller
 {
     public function __construct() {
-        $this->middleware('canCreateModels');
+        $this->middleware(['jwt.auth', 'canCreateModels']);
     }
 
     public function __invoke(ClubCreateRequest $request, ClubService $service): ClubFullResource

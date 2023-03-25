@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class GameUpdateController extends Controller
 {
     public function __construct() {
-        $this->middleware('canUpdateModels');
+        $this->middleware(['jwt.auth', 'canUpdateModels']);
     }
 
     public function __invoke(GameUpdateRequest $request, Game $game, GameService $service): GameFullResource

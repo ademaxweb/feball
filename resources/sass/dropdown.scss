@@ -1,0 +1,10 @@
+.dropdown{
+    background-color: transparent;
+    color: $text-color;
+    border-radius: var(--g-br);
+    padding: 10px;
+    outline: none;
+    & > option{
+        background: $color-gray-2;
+    }
+}

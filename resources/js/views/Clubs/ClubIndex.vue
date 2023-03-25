@@ -1,6 +1,9 @@
 <template>
     <div class="container container--gap container--column container--pv">
         <h1 class="heading">Список клубов</h1>
+        <div class="container container--gap-s">
+            <router-link :to="{name: 'club.create'}" class="button button--full">Создать клуб</router-link>
+        </div>
         <div class="container container--column container--gap-s" v-for="country in countries" :key="country.id" v-show="country.clubs.length > 0">
             <h2 class="heading heading--secondary">{{country.name}}</h2>
             <ul class="list">

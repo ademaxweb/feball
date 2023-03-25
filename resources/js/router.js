@@ -26,6 +26,12 @@ const router = createRouter({
             meta: {},
             component: ()=>import('./views/Clubs/ClubCurrent.vue')
         },
+        {
+            name: 'club.create',
+            path: '/clubs/create',
+            meta: {},
+            component: ()=>import('./views/Clubs/ClubCreate.vue')
+        },
 
         // TOURNAMENTS
         {

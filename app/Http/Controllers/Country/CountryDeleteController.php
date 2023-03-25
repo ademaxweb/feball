@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class CountryDeleteController extends Controller
 {
     public function __construct() {
-        $this->middleware('canDeleteModels');
+        $this->middleware(['jwt.auth', 'canDeleteModels']);
     }
 
     public function __invoke(Country $country, CountryService $service): \Illuminate\Http\JsonResponse

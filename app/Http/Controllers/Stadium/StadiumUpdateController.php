@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class StadiumUpdateController extends Controller
 {
     public function __construct() {
-        $this->middleware('canUpdateModels');
+        $this->middleware(['jwt.auth', 'canUpdateModels']);
     }
 
     public function __invoke(StadiumUpdateRequest $request, Stadium $stadium, StadiumService $service): StadiumFullResource

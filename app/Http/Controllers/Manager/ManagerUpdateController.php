@@ -12,7 +12,7 @@ use Illuminate\Http\Request;
 class ManagerUpdateController extends Controller
 {
     public function __construct() {
-        $this->middleware('canUpdateModels');
+        $this->middleware(['jwt.auth', 'canUpdateModels']);
     }
 
     public function __invoke(ManagerUpdateRequest $request, Manager $manager, ManagerService $service): ManagerFullResource

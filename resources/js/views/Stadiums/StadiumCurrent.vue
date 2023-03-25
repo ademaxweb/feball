@@ -1,6 +1,9 @@
 <template>
     <div class="container container--section container--gap container--pv" v-if="stadium">
         <h1 class="heading">{{stadium.name}}</h1>
+        <div class="container container--full container--gap-s">
+            <button class="button button--action button--danger" @click="deleteStadium">Удалить</button>
+        </div>
         <h2 class="heading heading--secondary">Вместимость стадиона: <span class="info--secondary--accent">{{ (15000).toLocaleString() }}</span></h2>
         <h2 class="heading heading--secondary" v-if="stadium.club">
             Клуб:
@@ -42,7 +45,8 @@ export default {
     name: "StadiumCurrent",
     data(){
         return {
-            stadium: null
+            stadium: null,
+            stadium_id: null,
         }
     },
     methods: {
@@ -54,9 +58,19 @@ export default {
                     console.log(data);
                     document.title = data.name
                 })
+        },
+        deleteStadium (){
+            if (!this.stadium_id) return false
+            api.stadium.delete(this.stadium_id)
+                .then(data => {
+                    this.stadium = null
+                    this.$router.push({name: "stadiums"})
+                })
+                .catch(error => console.error(error))
         }
     },
     mounted() {
+        this.stadium_id = this.$route.params.id
         this.getStadiumInfo()
     },
 }

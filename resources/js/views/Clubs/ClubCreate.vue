@@ -1,26 +1,19 @@
 <template>
     <div class="container container--section container--pv container--center">
-        <h2 class="heading">Создать стадион</h2>
+        <h2 class="heading">Создать клуб</h2>
         <form class="form" @submit.prevent="submitForm">
             <div class="form__block">
-                <label for="stadium" class="form__input_label">Название</label>
-                <input v-model.trim="stadium.name" type="text" class="form__input" placeholder="Название" id="stadiumName">
+                <label for="clubName" class="form__input_label">Название</label>
+                <input v-model.trim="club.name" type="text" class="form__input" placeholder="Название" id="clubName">
             </div>
             <div class="form__block">
-                <label for="stadium" class="form__input_label">Год основания</label>
-                <input v-model.trim="stadium.founding" type="number" class="form__input" placeholder="Год основания" id="stadiumFounding">
+                <label for="clubFounding" class="form__input_label">Дата основания</label>
+                <input v-model.trim="club.founding" type="date" class="form__input" placeholder="Дата основания" id="clubFounding">
             </div>
             <div class="form__block">
-                <label for="stadium" class="form__input_label">Страна</label>
-                <select v-model="stadium.country_id" @change="getSelectedCountryClubs" class="dropdown">
+                <label for="clubCountry" class="form__input_label">Страна</label>
+                <select v-model="club.country_id" class="dropdown" id="clubCountry">
                     <option v-for="country in countries" :value="country.id">{{ country.name }}</option>
-                </select>
-            </div>
-            <div class="form__block">
-                <label for="stadium" class="form__input_label">Клуб</label>
-                <select v-model="stadium.club_id" class="dropdown">
-                    <option value="0">Не выбран</option>
-                    <option v-for="club in clubs" :key="club.id" :value="club.id">{{ club.name }}</option>
                 </select>
             </div>
 
@@ -44,17 +37,15 @@ export default {
     name: "StadiumCreate",
     data(){
         return {
-            stadium: {
+            club: {
                 name: '',
-                founding: 2023,
+                founding: null,
                 country_id: null,
-                club_id: 0,
             },
             countries: [],
-            clubs: [],
             errors: [],
             formSubmittingProcess: false,
-            name: "Создание стадиона"
+            name: "Создание клуба"
         }
     },
     beforeMount() {
@@ -68,18 +59,6 @@ export default {
             api.country.getAll()
                 .then(data => {
                     this.countries = data
-                    this.stadium.country_id = this.countries[0]?.id
-                    this.getSelectedCountryClubs()
-                })
-        },
-        getSelectedCountryClubs(){
-            console.log(this.stadium)
-            this.clubs = []
-            this.stadium.club_id = 0
-            api.country.getById(this.stadium.country_id)
-                .then(data => {
-                    this.clubs = data.clubs
-                    // this.stadium.club_id = this.clubs[0]?.id
                 })
         },
         submitForm(){
@@ -96,17 +75,13 @@ export default {
 
 
 
-            const creatingData = this.stadium
-            if (!this.stadium.club_id) delete creatingData.club_id
-
             this.formSubmittingProcess = true
 
-            api.stadium.create(creatingData)
+            api.club.create(this.club)
                 .then(data => {
                     console.log(data)
                     this.formSubmittingProcess = false
-                    this.stadium.name = ''
-                    this.stadium.founding = 2023
+                    this.club.name = ''
                 })
                 .catch(error => {
                     console.log(error)
@@ -117,7 +92,7 @@ export default {
     },
     computed: {
         formValidated() {
-            return this.stadium.name.trim() && this.stadium.founding && this.stadium.country_id
+            return this.club.name.trim() && this.club.founding && this.club.country_id
         }
     }
 }

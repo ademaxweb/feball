@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class ManagerDeleteController extends Controller
 {
     public function __construct() {
-        $this->middleware('canDeleteModels');
+        $this->middleware(['jwt.auth', 'canDeleteModels']);
     }
 
     public function __invoke(Manager $manager, ManagerService $service): JsonResponse

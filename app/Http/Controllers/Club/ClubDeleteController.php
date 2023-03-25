@@ -10,7 +10,7 @@ use Illuminate\Http\Request;
 class ClubDeleteController extends Controller
 {
     public function __construct() {
-        $this->middleware('canDeleteModels');
+        $this->middleware(['jwt.auth', 'canDeleteModels']);
     }
 
     public function __invoke(Club $club, ClubService $service): \Illuminate\Http\JsonResponse

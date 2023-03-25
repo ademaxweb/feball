@@ -11,7 +11,7 @@ use Illuminate\Http\Request;
 class GameCreateController extends Controller
 {
     public function __construct() {
-        $this->middleware('canCreateModels');
+        $this->middleware(['jwt.auth', 'canCreateModels']);
     }
 
     public function __invoke(GameCreateRequest $request, GameService $service)
