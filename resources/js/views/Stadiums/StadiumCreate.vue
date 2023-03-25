@@ -111,6 +111,7 @@ export default {
                 .catch(error => {
                     console.log(error)
                     this.errors = error.data
+                    this.formSubmittingProcess = false
                 })
 
         }
