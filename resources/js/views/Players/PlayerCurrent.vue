@@ -7,7 +7,7 @@
         <div class="container container--full">
             <div class="container container--half container--column container--gap-s">
                 <h2 class="heading heading--secondary">Позиция: <span class="info--secondary--accent">{{ player.position.name }}</span></h2>
-                <h2 class="heading heading--secondary">Игровой номер: <span class="info--secondary--accent">{{ player.number }}</span></h2>
+                <h2 class="heading heading--secondary">Игровой номер: <span class="info--secondary--accent">#{{ player.number }}</span></h2>
                 <h2 class="heading heading--secondary">Дата рождения: <span class="info--secondary--accent">{{ new Date(player.birth).toLocaleDateString() }}</span></h2>
             </div>
             <div class="container container--half container--column container--gap-s container--right">
