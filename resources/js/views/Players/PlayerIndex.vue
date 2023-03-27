@@ -9,7 +9,7 @@
         <ul class="list">
             <li class="list__item" v-for="player in country.players" :key="player.id">
                 <router-link :to="{name: 'player', params: {id: player.id}}" class="link link--with_icon">
-                    <h3 class="heading">{{player.surname}} {{player.name}}</h3>
+                    <h3 class="heading">{{player.name}} {{player.surname}}</h3>
                     <font-awesome-icon class="link__icon" icon="fa-solid fa-link" />
                 </router-link>
                 <div class="container container--v-center container--gap">

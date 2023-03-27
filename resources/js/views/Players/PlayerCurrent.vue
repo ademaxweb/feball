@@ -1,6 +1,6 @@
 <template>
     <div class="container container--section container--gap container--pv" v-if="player">
-        <h1 class="heading">{{player.surname}} {{player.name}}</h1>
+        <h1 class="heading">{{player.name}} {{player.surname}}</h1>
         <div class="container container--full container--gap-s">
             <button class="button button--action button--danger" @click="deleteplayer">Удалить</button>
         </div>

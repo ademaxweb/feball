@@ -38,8 +38,7 @@
             </div>
             <div class="form__block">
                 <label for="playerClub" class="form__input_label">Клуб</label>
-                <select v-model="player.club_id" class="dropdown" id="playerClub">
-                    <option value="0">Не выбран</option>
+                <select v-model="player.club_id" class="dropdown" id="playerClub" :disabled="clubs.length === 0">
                     <option v-for="club in clubs" :key="club.id" :value="club.id">{{ club.name }}</option>
                 </select>
             </div>
