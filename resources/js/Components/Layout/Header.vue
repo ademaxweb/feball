@@ -89,6 +89,9 @@
                 <router-link @click="closeHeaderMenu" :to="{name: 'clubs'}" class="link header__menu__link">
                     <font-awesome-icon icon="fa-solid fa-shirt" />Клубы
                 </router-link>
+                <router-link @click="closeHeaderMenu" :to="{name: 'players'}" class="link header__menu__link">
+                    <font-awesome-icon icon="fa-solid fa-person" />Игроки
+                </router-link>
                 <router-link @click="closeHeaderMenu" :to="{name: 'tournaments'}" class="link header__menu__link">
                     <font-awesome-icon icon="fa-solid fa-trophy" />Турниры
                 </router-link>

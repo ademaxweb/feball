@@ -119,9 +119,20 @@ const router = createRouter({
             name: 'players',
             path: '/players',
             meta: {},
-            component: ()=>import('./views/Login.vue')
+            component: ()=>import('./views/Players/PlayerIndex.vue')
         },
-
+        {
+            name: 'player.create',
+            path: '/player/create',
+            meta: {},
+            component: ()=>import('./views/Players/PlayerCreate.vue')
+        },
+        {
+            name: 'player',
+            path: '/player/:id',
+            meta: {},
+            component: ()=>import('./views/Players/PlayerCurrent.vue')
+        },
 
         // AUTH
         {

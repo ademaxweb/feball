@@ -50,7 +50,7 @@
                     <img src="../../../img/unknown_player.jpg" alt="">
                 </div>
                 <div class="container">
-                    <router-link :to="{name: 'index'}"><h3>{{player.name}} {{player.surname}}</h3></router-link>
+                    <router-link :to="{name: 'player', params: {id: player.id}}"><h3>{{player.name}} {{player.surname}}</h3></router-link>
                 </div>
                 <div class="container container--column">
                     <p class="club_player__secondary_text">{{player.position.name}} #{{player.number}}</p>
