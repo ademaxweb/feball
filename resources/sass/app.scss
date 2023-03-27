@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
 @import "variables";
 @import "scrollbar";
-@import "button";
 @import "container";
+@import "button";
 @import "form";
 @import "list";
 @import "table";
@@ -224,7 +224,6 @@ p, span, h1, h2, h3, h4, div{
         & > img{
             object-fit: cover;
             max-width: 100%;
-            //object-fit: contain;
         }
     }
     &__secondary_text{
