@@ -81,6 +81,7 @@ export default {
             .then(data => {
                 this.club = data
                 document.title = this.club.name
+                console.log(data)
             })
             .catch(error => console.log(error))
     },
