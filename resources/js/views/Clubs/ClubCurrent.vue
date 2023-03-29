@@ -25,7 +25,7 @@
         <ul class="list">
             <li class="list__item" v-if="!club.tournaments.length"><h3 class="heading">Турниров не найдено</h3></li>
             <li class="list__item" v-for="tournament in club.tournaments">
-                <router-link :to="{name: 'index'}" class="link"><h3 class="heading">{{tournament.name}}</h3></router-link>
+                <router-link :to="{name: 'tournament', params: {id: tournament.id}}" class="link"><h3 class="heading">{{tournament.name}}</h3></router-link>
             </li>
         </ul>
         <h2 class="heading heading--secondary">Главный тренер: <span class="heading--secondary__accent" v-if="!club.manager">Не известен</span></h2>

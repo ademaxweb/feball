@@ -8,6 +8,7 @@ import api from "../api";
 export default {
     name: "Home",
     mounted() {
+        this.$router.push({name: "clubs"})
     },
 }
 </script>
