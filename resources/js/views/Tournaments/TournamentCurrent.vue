@@ -8,6 +8,11 @@
         <div class="container container--full container--column container--gap-s">
             <h2 class="heading heading--secondary">Последние матчи:</h2>
             <ul class="list">
+                <li class="list__item" v-if="!tournament.games.length">
+                    <div class="container container--v-center container--gap">
+                        <h3 class="heading">Матчей пока нет</h3>
+                    </div>
+                </li>
                 <li class="list__item" v-for="game in tournament.games">
                     <div class="container container--v-center container--gap">
                         <router-link :to="{name: 'game', params: {id: game.id}}" class="link link--with_icon">
@@ -43,9 +48,7 @@
                         </router-link>
                     </div>
                     <div class="container container--v-center container--gap">
-                        <p class="info info--secondary">
-                            Дата: <span class="info--secondary--accent">{{new Date(club.found).toLocaleDateString()}}</span>
-                        </p>
+
                     </div>
                 </li>
             </ul>
